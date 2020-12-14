@@ -53,6 +53,7 @@ const user = {
 // store user selected inq. 
 user.displayinquiries();
 
+let selectedInq = [];
 
 let allInquiries = document.querySelectorAll('.inquiries');
 
@@ -60,14 +61,21 @@ for (i = 0; i < allInquiries.length; i++) {
     allInquiries[i].onclick = (e) => { // for hver felles klassenavn kjør
         console.log('show class name'); 
         let classname = e.target.getAttribute('class'); //parameter e sørger for adskilte klikket klassenavn
-        console.log(classname);
+        
+        selectedInq = classname;
+        console.log(selectedInq);
+        console.log(selectedInq.slice(-1)); //kutter ut siste delen av strengen 
+
+        
     }
 
 }
 
+( () => {
+    if(selectedInq[i].slice(-1) = 0);
+})
 
-
-
+// I just need the numbers to compare with. 
 // make a chatbot that answers simple questions
 // lag 'oppdater firmware' og en simple callback function for å øve på det. 
 // callbacks og promises.
