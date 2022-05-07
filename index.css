@@ -1,0 +1,209 @@
+* {
+  margin: none;
+  padding: none;
+}
+
+body {
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+  background-color: black;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  color: aqua;
+  font-family: sans-serif;
+  animation: Tron 2s forwards;
+}
+
+@keyframes Tron {
+  100% {
+    transform: scale(1);
+  }
+
+  0% {
+    transform: scale(0);
+  }
+}
+
+.meshGrid {
+  z-index: -11;
+  position: absolute;
+  border: 0.1px solid cyan;
+  width: 100vw;
+  height: 80em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  transform: perspective(200px) rotateX(35deg);
+}
+
+.square {
+  border: 1px solid cyan;
+  width: 100%;
+  height: 100%;
+}
+
+.squareTwo {
+  /* border: 1px solid orange; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+}
+
+.frontGrid {
+  width: 99%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  z-index: -10;
+  /* border: 1px solid yellow; */
+}
+
+.android {
+  /* placement: row 3 - 4, column 2 - 5 */
+  background-image: url("./media/robottwo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: 2 / 3 / 7 / 6;
+  animation: hover 2s infinite alternate;
+  margin-left: 100px;
+}
+
+@keyframes hover {
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid aqua;
+  color: aqua;
+  margin: 5px;
+  border-radius: 8px;
+  animation: Tron 5s forwards;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.console {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  height: fit-content;
+  width: 900px;
+  display: flex;
+  color: aqua;
+  padding: 15px;
+  font-size: clamp(0.9em, 0.9vw, 2em);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  animation: Tron 5s forwards;
+  margin-left: 20%;
+  margin-top: 10%;
+  position: absolute;
+}
+
+.userResponse:hover {
+  cursor: pointer;
+}
+
+.inquiries:hover {
+  cursor: pointer;
+}
+
+.refCode {
+  height: 40px;
+  width: 200px;
+  background-color: black;
+  border: 1px solid aqua;
+  padding: 5px;
+  color: aqua;
+  text-align: center;
+  transform: translateX(16vw);
+  font-size: clamp(1em, 12px, 3em);
+  outline: none;
+  display: none;
+  position: absolute;
+  margin-top: 50px;
+}
+
+.sellProducts {
+  position: absolute;
+  width: 420px;
+  margin-left: 25vw;
+  grid-area: 2 / 1;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(0.9em, 0.9vw, 2em);
+}
+
+.salesLine {
+  display: none;
+}
+
+.products {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  margin: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: clamp(1em, 15px, 2em);
+  color: aqua;
+}
+
+.prisBelop {
+  color: aqua;
+  position: absolute;
+  z-index: 20;
+}
+
+#droid {
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+}
+
+button:hover {
+  border: 1px solid goldenrod;
+  color: goldenrod;
+}
+
+.bar {
+  margin: auto 0;
+  height: 25px;
+  max-width: 600px;
+  width: 0;
+  color: black;
+  background-image: linear-gradient(30deg, black, aqua);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 25px;
+  animation: colorize 5s infinite alternate;
+}
